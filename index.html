@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+    <title>Underwater Adventure Mergulhos Turísticos</title>
+    <script src="./assets/js/jquery.js"></script>
+</head>
+<body>
+  <!-- header section starts -->
+
+<header>
+<a href="http://#" class="logo"><h1>Underwater</h1></a>
+
+<nav class="navbar ">
+    <ul>
+        <li><a href="#">Página Inicial</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Agendar</a></li>
+    </ul>
+</nav>
+<div class="fas fa-bars"></div>
+</header>
+<!-- header section ends-->
+
+<!--home section start-->
+<div class="container">
+  <div class="content">
+    <h1>Underwater</h1>
+    <h2>adventure</h2>
+
+    <a href="http://#"><button>Agendar</button></a>
+
+    <div class="icons">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+    </div>
+  </div>
+<div class="video-container">
+  <video src="./assets/media/video/video1.mp4" autoplay muted loop class="vid1"></video>
+  <video src="./assets/media/video/video2.mp4" autoplay muted loop class="vid2"></video>
+  <video src="./assets/media/video/video3.mp4" autoplay muted loop class="vid3"></video>
+</div>
+
+<div class="controls">
+  <div class="dots dot1"></div>
+  <div class="dots dot2"></div>
+  <div class="dots dot3"></div>
+</div>
+
+</div>
+
+<!--home section ends-->
+
+<!-- jQuery part starts-->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script>
+  
+  $(document).ready(function(){
+  
+    $('.fa-bars').click(function(){
+      $(this).toggleClass('fa-times');
+      $('.navbar').toggleClass('nav-toggle');
+    });
+
+    $('.navbar').click(function(){
+      $(this).removeClass('nav-toggle');
+      $('.fa-bars').removeClass('fa-times');
+    });
+
+    $('.dot1').click(function(){
+      $('.vid1').css('display', 'block');
+      $('.vid2').css('display', 'none');
+      $('.vid3').css('display', 'none');
+    });
+
+    $('.dot2').click(function(){
+      $('.vid1').css('display', 'none');
+      $('.vid2').css('display', 'block');
+      $('.vid3').css('display', 'none');
+    });
+
+    $('.dot3').click(function(){
+      $('.vid1').css('display', 'none');
+      $('.vid2').css('display', 'none');
+      $('.vid3').css('display', 'block');
+    });
+  });
+  
+  </script>
+  
+
+
+<!-- jQuery part ends->
+ 
+</body>
+</html>
